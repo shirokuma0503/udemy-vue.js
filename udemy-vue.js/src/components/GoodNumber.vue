@@ -1,22 +1,12 @@
 <template>
   <div>
-    <p>いいね（{{ good }}）</p>
-    <button @click="increment">いいね +１</button>
+    <p>合計の半分の数を表示（{{ good / 2 }}）</p>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      good: 1
-    };
-  },
-  methods: {
-    increment() {
-      this.good += 1;
-    }
-  }
+  props: ['good'],
 };
 </script>
 

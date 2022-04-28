@@ -1,7 +1,9 @@
 <template>
   <div>
     <GoodHeader></GoodHeader>
-    <GoodNumber></GoodNumber>
+    <GoodNumber :good="number"></GoodNumber>
+    <GoodNumber :good="number"></GoodNumber>
+    <p>合計のいいね（{{ number }}）</p>
   </div>
 </template>
 
@@ -10,7 +12,12 @@ import GoodHeader from './components/GoodHeader.vue';
 
 export default {
   components: {
-    GoodHeader: GoodHeader
+    GoodHeader: GoodHeader,
+  },
+  data() {
+    return {
+      number: 10
+    };
   }
 };
 </script>
