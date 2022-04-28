@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import GoodHeader from './GoodHeader.vue';
+import GoodHeader from './components/GoodHeader.vue';
 
 export default {
   components: {

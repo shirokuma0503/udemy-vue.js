@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     increment() {
-      return this.good += 1
+      this.good += 1;
     }
   }
 };

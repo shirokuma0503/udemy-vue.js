@@ -7,9 +7,9 @@ export default {
   data() {
     return {
       title: "↓いいねの数を表示↓"
-    }
+    };
   }
-}
+};
 </script>
 
 <style></style>
