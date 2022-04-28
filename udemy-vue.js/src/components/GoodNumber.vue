@@ -6,7 +6,9 @@
 
 <script>
 export default {
-  props: ['good'],
+  props: {
+    good: Number
+  },
   computed: {
     halfNumber() {
       return this.good / 2;
