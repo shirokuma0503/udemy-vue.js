@@ -1,5 +1,8 @@
 <template>
-  <p>いいね（{{ good }}）</p>
+  <div>
+    <p>いいね（{{ good }}）</p>
+    <button @click="increment">いいね +１</button>
+  </div>
 </template>
 
 <script>
@@ -8,6 +11,11 @@ export default {
     return {
       good: 1
     };
+  },
+  methods: {
+    increment() {
+      return this.good += 1
+    }
   }
 };
 </script>
