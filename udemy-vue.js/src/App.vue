@@ -1,7 +1,18 @@
 <template>
-  <GoodNumber></GoodNumber>
+  <div>
+    <GoodHeader></GoodHeader>
+    <GoodNumber></GoodNumber>
+  </div>
 </template>
 
-<script></script>
+<script>
+import GoodHeader from './GoodHeader.vue';
+
+export default {
+  components: {
+    GoodHeader: GoodHeader
+  }
+};
+</script>
 
 <style></style>
