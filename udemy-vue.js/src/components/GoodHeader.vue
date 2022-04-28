@@ -1,5 +1,7 @@
 <template>
-  <h1>{{ title }}</h1>
+  <div>
+    <h1>{{ title }}</h1>
+  </div>
 </template>
 
 <script>
@@ -12,4 +14,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+ div {
+   background-color: #dcedec;
+ }
+</style>

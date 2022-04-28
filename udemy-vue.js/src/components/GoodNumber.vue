@@ -20,4 +20,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+  div {
+    border: 5px solid #9db7b2;
+  }
+</style>
