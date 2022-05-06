@@ -1,19 +1,15 @@
 <template>
   <div>
     <GoodHeader>
-      <p>①適当に書いたものは全部デフォルトslotへ</p>
-
-      <template v-slot:slotTitle>
+      <template v-slot:slotTitle="slotProps">
         <h1>slotで表示するヘッダー</h1>
+        <p>{{ slotProps }}</p>
+        <p>{{ slotProps.userName.firstName }}</p>
+        <p>{{ slotProps.userName.lastName }}</p>
       </template>
-
-      <p>②適当に書いたものは全部デフォルトslotへ</p>
-
       <template v-slot:slotNumber>
         <p>合計のいいね（{{ number }}）</p>
       </template>
-
-      <p>③適当に書いたものは全部デフォルトslotへ</p>
     </GoodHeader>
     <GoodNumber :good="number"></GoodNumber>
     <GoodNumber :good="number" @good-click="incrementNumber"></GoodNumber>
