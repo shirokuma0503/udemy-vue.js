@@ -1,12 +1,8 @@
 <template>
   <div>
-    <slot name="slotTitle" :userName="user">
+    <slot :userName="user">
       <h1>slotの中身がない時に表示される</h1>
     </slot>
-
-    <slot name="slotNumber"></slot>
-
-    <slot></slot>
   </div>
 </template>
 
