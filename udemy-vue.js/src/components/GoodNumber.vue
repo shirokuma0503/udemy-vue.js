@@ -7,7 +7,10 @@
 <script>
 export default {
   props: {
-    good: Number
+    good: {
+      type: Number,
+      required: true
+    }
   },
   computed: {
     halfNumber() {
