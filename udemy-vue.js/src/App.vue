@@ -59,6 +59,23 @@
       >
       <label for="20">20代</label>
       <p>{{ eventData.target }}</p>
+
+      <p>参加費</p>
+      <input 
+        type="radio"
+        id="free"
+        value="無料"
+        v-model="eventData.price"
+      >
+      <label for="free">無料</label>
+      <input 
+        type="radio"
+        id="100"
+        value="有料"
+        v-model="eventData.price"
+      >
+      <label for="100">有料</label>
+      <p>{{ eventData.price }}</p>
     </div>
   </div>
 </template>
@@ -73,7 +90,8 @@ export default {
         host: "田中",
         detail: "",
         isPrivate: false,
-        target: []
+        target: [],
+        price: "無料"
       }
     }
   }
