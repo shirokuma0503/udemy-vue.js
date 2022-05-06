@@ -1,6 +1,8 @@
 <template>
   <div>
-    <GoodHeader></GoodHeader>
+    <GoodHeader>
+      <h1>slotで表示しているヘッダー</h1>
+    </GoodHeader>
     <GoodNumber :good="number"></GoodNumber>
     <GoodNumber :good="number" @good-click="incrementNumber"></GoodNumber>
     <p>合計のいいね（{{ number }}）</p>
