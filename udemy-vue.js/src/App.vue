@@ -34,6 +34,14 @@
         v-model="eventData.detail"></textarea>
       <p style="white-space: pre;">{{ eventData.detail }}</p>
       <pre>{{ eventData.detail }}</pre>
+
+      <input
+        type="checkbox"
+        id="isPrivate"
+        v-model="eventData.isPrivate"
+      >
+      <label for="isPrivate">非公開</label>
+      <p>{{ eventData.isPrivate }}</p>
     </div>
   </div>
 </template>
@@ -46,7 +54,8 @@ export default {
         title: "タイトル",
         maxNumber: 100,
         host: "田中",
-        detail: ""
+        detail: "",
+        isPrivate: false
       }
     }
   }
