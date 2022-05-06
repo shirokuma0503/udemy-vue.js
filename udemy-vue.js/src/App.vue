@@ -1,10 +1,9 @@
 <template>
   <div>
-    <GoodHeader v-slot:default="slotProps">
-      <h1>slotで表示するヘッダー</h1>
-      <p>{{ slotProps }}</p>
-      <p>{{ slotProps.userName.firstName }}</p>
-      <p>{{ slotProps.userName.lastName }}</p>
+    <GoodHeader>
+      <template v-slot:[title]>
+        <h1>slotで表示するヘッダー</h1>
+      </template>
     </GoodHeader>
   </div>
 </template>
@@ -15,6 +14,11 @@ import GoodHeader from './components/GoodHeader.vue';
 export default {
   components: {
     GoodHeader: GoodHeader,
+  },
+  data() {
+    return {
+      title: "slotTitle"
+    }
   }
 };
 </script>

@@ -1,22 +1,12 @@
 <template>
   <div>
-    <slot :userName="user">
+    <slot name="slotTitle">
       <h1>slotの中身がない時に表示される</h1>
     </slot>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        user: {
-          firstName: "氏",
-          lastName: "名"
-        }
-      }
-    }
-  }
 </script>
 
 <style scoped>
