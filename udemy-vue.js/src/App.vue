@@ -6,7 +6,11 @@
       </template>
     </GoodHeader>
 
-    <component :is="currentComponent"></component>
+    <button @click="currentComponent = 'TestHome'">TestHome</button>
+    <button @click="currentComponent = 'TestAbout'">TestAbout</button>
+    <keep-alive>
+      <component :is="currentComponent"></component>
+    </keep-alive>
   </div>
 </template>
 

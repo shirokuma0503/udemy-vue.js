@@ -1,3 +1,6 @@
 <template>
-  <p>Home.vueです</p>
+  <div>
+    <p>Home.vueです</p>
+    <input>
+  </div>
 </template>
