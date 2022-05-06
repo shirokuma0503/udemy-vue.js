@@ -42,6 +42,23 @@
       >
       <label for="isPrivate">非公開</label>
       <p>{{ eventData.isPrivate }}</p>
+
+      <p>参加条件</p>
+      <input 
+        type="checkbox"
+        id="10"
+        value="10代"
+        v-model="eventData.target"
+      >
+      <label for="10">10代</label>
+      <input 
+        type="checkbox"
+        id="20"
+        value="20代"
+        v-model="eventData.target"
+      >
+      <label for="20">20代</label>
+      <p>{{ eventData.target }}</p>
     </div>
   </div>
 </template>
@@ -55,7 +72,8 @@ export default {
         maxNumber: 100,
         host: "田中",
         detail: "",
-        isPrivate: false
+        isPrivate: false,
+        target: []
       }
     }
   }
