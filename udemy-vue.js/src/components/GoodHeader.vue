@@ -5,6 +5,8 @@
     </slot>
 
     <slot name="slotNumber"></slot>
+
+    <slot></slot>
   </div>
 </template>
 
