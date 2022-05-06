@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>合計の半分の数を表示（{{ halfNumber }}）</p>
+    <p>{{ testProps }}</p>
   </div>
 </template>
 
@@ -10,6 +11,9 @@ export default {
     good: {
       type: Number,
       required: true
+    },
+    testProps: {
+      type: String
     }
   },
   computed: {

@@ -2,7 +2,7 @@
   <div>
     <GoodHeader></GoodHeader>
     <GoodNumber :good="number"></GoodNumber>
-    <GoodNumber :good="number"></GoodNumber>
+    <GoodNumber :good="number" test-props="複数のprops"></GoodNumber>
     <p>合計のいいね（{{ number }}）</p>
   </div>
 </template>
