@@ -2,13 +2,7 @@
   <div>
     <div>
       <h2>インベントのフォーム</h2>
-      <label for="title">タイトル</label>
-      <input
-        id="title"
-        type="text"
-        v-model.lazy="eventData.title"
-      >
-      <p>{{ eventData.title }}</p>
+      <EventTitle v-model="eventData.title"></EventTitle>
 
       <label for="maxNumber">最大人数</label>
       <input
@@ -87,7 +81,12 @@
 </template>
 
 <script>
+import EventTitle from './components/EventTitle.vue';
+
 export default {
+  components: {
+    EventTitle
+  },
   data() {
     return {
       locations: ["東京", "大阪"],
