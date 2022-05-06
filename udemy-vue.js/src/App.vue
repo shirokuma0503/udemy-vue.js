@@ -2,7 +2,7 @@
   <div>
     <GoodHeader></GoodHeader>
     <GoodNumber :good="number"></GoodNumber>
-    <GoodNumber :good="number" test-props="複数のprops"></GoodNumber>
+    <GoodNumber :good="number" @good-click="number  = $event"></GoodNumber>
     <p>合計のいいね（{{ number }}）</p>
   </div>
 </template>

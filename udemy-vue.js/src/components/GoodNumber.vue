@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>合計の半分の数を表示（{{ halfNumber }}）</p>
-    <p>{{ testProps }}</p>
+    <button @click="increment">いいね＋1</button>
   </div>
 </template>
 
@@ -11,14 +11,16 @@ export default {
     good: {
       type: Number,
       required: true
-    },
-    testProps: {
-      type: String
     }
   },
   computed: {
     halfNumber() {
       return this.good / 2;
+    }
+  },
+  methods: {
+    increment() {
+      this.$emit("good-click", this.good + 1);
     }
   }
 };
