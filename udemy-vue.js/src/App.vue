@@ -2,7 +2,7 @@
   <div>
     <GoodHeader></GoodHeader>
     <GoodNumber :good="number"></GoodNumber>
-    <GoodNumber :good="number" @good-click="number  = $event"></GoodNumber>
+    <GoodNumber :good="number" @good-click="incrementNumber"></GoodNumber>
     <p>合計のいいね（{{ number }}）</p>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
     return {
       number: 10
     };
+  },
+  methods: {
+    incrementNumber(value) {
+      this.number = value
+    }
   }
 };
 </script>
