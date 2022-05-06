@@ -1,8 +1,10 @@
 <template>
   <div>
-    <slot>
+    <slot name="slotTitle">
       <h1>slotの中身がない時に表示される</h1>
     </slot>
+
+    <slot name="slotNumber"></slot>
   </div>
 </template>
 

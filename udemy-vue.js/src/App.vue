@@ -1,9 +1,15 @@
 <template>
   <div>
-    <GoodHeader></GoodHeader>
+    <GoodHeader>
+      <template v-slot:slotTitle>
+        <h1>slotで表示するヘッダー</h1>
+      </template>
+      <template v-slot:slotNumber>
+        <p>合計のいいね（{{ number }}）</p>
+      </template>
+    </GoodHeader>
     <GoodNumber :good="number"></GoodNumber>
     <GoodNumber :good="number" @good-click="incrementNumber"></GoodNumber>
-    <p>合計のいいね（{{ number }}）</p>
   </div>
 </template>
 
