@@ -1,7 +1,7 @@
 <template>
   <div>
     <GoodHeader>
-      <template v-slot:[title]>
+      <template #[title]>
         <h1>slotで表示するヘッダー</h1>
       </template>
     </GoodHeader>
