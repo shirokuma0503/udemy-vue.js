@@ -1,23 +1,27 @@
 <template>
   <div>
     <GoodHeader>
-      <template #[title]>
+      <template>
         <h1>slotで表示するヘッダー</h1>
       </template>
     </GoodHeader>
+
+    <component :is="currentComponent"></component>
   </div>
 </template>
 
 <script>
 import GoodHeader from './components/GoodHeader.vue';
+import TestHome from './components/TestHome.vue';
 
 export default {
   components: {
     GoodHeader: GoodHeader,
+    TestHome: TestHome
   },
   data() {
     return {
-      title: "slotTitle"
+      currentComponent: "TestHome"
     }
   }
 };
