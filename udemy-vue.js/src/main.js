@@ -3,8 +3,9 @@ import App from './App.vue';
 import GoodNumber from './components/GoodNumber.vue';
 
 Vue.component('GoodNumber', GoodNumber);
-Vue.directive('border', function(el) {
+Vue.directive('border', function(el, binding) {
   el.style.border = "2px solid black";
+  el.style.borderWidth = binding.value;
 });
 
 new Vue({
