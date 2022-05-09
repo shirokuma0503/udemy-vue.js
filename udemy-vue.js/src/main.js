@@ -4,8 +4,12 @@ import GoodNumber from './components/GoodNumber.vue';
 
 Vue.component('GoodNumber', GoodNumber);
 Vue.directive('border', function(el, binding) {
-  el.style.border = "2px solid black";
-  el.style.borderWidth = binding.value;
+  el.style.borderWidth = binding.value.width;
+  el.style.borderColor = binding.value.color;
+  el.style.borderStyle = binding.arg;
+  if (binding.modifiers.round) {
+    el.style.borderRadius = "1rem";
+  }
 });
 
 new Vue({
