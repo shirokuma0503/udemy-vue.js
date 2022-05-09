@@ -16,6 +16,12 @@ Vue.component('GoodNumber', GoodNumber);
 Vue.filter("upperCase", function(value) {
   return value.toUpperCase();
 });
+// mixin
+Vue.mixin({
+  created() {
+    console.log("global mixin");
+  }
+});
 
 new Vue({
   render: h => h(App),
