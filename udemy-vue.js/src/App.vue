@@ -1,5 +1,6 @@
 <template>
   <div>
+    <TestHome></TestHome>
     <div>
       <h2>インベントのフォーム</h2>
       <EventTitle v-model="eventData.title"></EventTitle>
@@ -82,10 +83,12 @@
 
 <script>
 import EventTitle from './components/EventTitle.vue';
+import TestHome from './components/TestHome.vue';
 
 export default {
   components: {
-    EventTitle
+    EventTitle,
+    TestHome
   },
   data() {
     return {

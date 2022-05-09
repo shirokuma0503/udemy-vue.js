@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Home.vueです</p>
+    <p v-border>Home.vueです</p>
     <input>
   </div>
 </template>
