@@ -4,6 +4,10 @@
     <transition name="fade">
       <p v-if="show"></p>
     </transition>
+
+    <transition name="slide">
+      <p v-if="show"></p>
+    </transition>
   </div>
 </template>
 
@@ -41,6 +45,23 @@ export default {
 .fade-leave-to {
   /* 消える時の最後の状態 */
   opacity: 0;
+}
+
+.slide-enter-active {
+  /* 現れる時のトランジション状態 */
+  animation: slide-in 1s;
+}
+.slide-leave-active {
+  /* 消える時のトランジション状態 */
+  animation: slide-in 1s reverse;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 
 p {
