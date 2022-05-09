@@ -5,21 +5,18 @@
 
     <h2>{{ title | upperCase }}</h2>
     <h2>{{ subTitle | lowerCase }}</h2>
+
+    <CountNumber></CountNumber>
   </div>
 </template>
 
 <script>
+import CountNumber from "./CountNumber.vue";
+import { countNumber } from "@/countNumber";
 export default {
-  data() {
-    return {
-      title: "welcome",
-      subTitle: "WELCOME"
-    }
-  },
-  filters: {
-    lowerCase(value) {
-      return value.toLowerCase();
-    }
+  mixins: [countNumber],
+  components: {
+    CountNumber
   },
   directives: {
     border(el, binding) {
