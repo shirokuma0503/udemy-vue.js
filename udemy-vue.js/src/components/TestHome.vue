@@ -4,6 +4,7 @@
     <input>
 
     <h2>{{ title | upperCase }}</h2>
+    <h2>{{ subTitle | lowerCase }}</h2>
   </div>
 </template>
 
@@ -11,7 +12,13 @@
 export default {
   data() {
     return {
-      title: "welcome"
+      title: "welcome",
+      subTitle: "WELCOME"
+    }
+  },
+  filters: {
+    lowerCase(value) {
+      return value.toLowerCase();
     }
   },
   directives: {
