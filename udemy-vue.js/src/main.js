@@ -12,6 +12,10 @@ Vue.component('GoodNumber', GoodNumber);
 //     el.style.borderRadius = "1rem";
 //   }
 // });
+// filter
+Vue.filter("upperCase", function(value) {
+  return value.toUpperCase();
+});
 
 new Vue({
   render: h => h(App),
