@@ -4,6 +4,13 @@
     <button @click="myAnimation = 'fade'">fade</button>
     <h3>今のアニメーションは{{ myAnimation }}</h3>
     <button @click="show = !show">表示／非表示</button>
+    <br>
+
+    <button @click="myComponent = 'AComponent'">AComponent</button>
+    <button @click="myComponent = 'BComponent'">BComponent</button>
+    <transition name="fade" mode="out-in">
+      <component :is="myComponent"></component>
+    </transition>
 
     <transition name="fade" mode="out-in">
       <p v-if="show" key="show">show</p>
@@ -27,11 +34,19 @@
 </template>
 
 <script>
+import AComponent from './components/AComponent.vue';
+import BComponent from './components/BComponent.vue';
+
 export default {
+  components: {
+    AComponent,
+    BComponent
+  },
   data() {
     return {
       show: true,
-      myAnimation: 'slide'
+      myAnimation: 'slide',
+      myComponent: 'AComponent'
     };
   }
 };
