@@ -1,5 +1,8 @@
 <template>
   <div>
+    <button @click="myAnimation = 'slide'">slide</button>
+    <button @click="myAnimation = 'fade'">fade</button>
+    <h3>今のアニメーションは{{ myAnimation }}</h3>
     <button @click="show = !show">表示／非表示</button>
     <transition
       appear
@@ -10,8 +13,7 @@
     </transition>
 
     <transition
-      name="slide"
-      type="animation"
+      :name="myAnimation"
       appear>
       <p v-if="show"></p>
     </transition>
@@ -22,7 +24,8 @@
 export default {
   data() {
     return {
-      show: true
+      show: true,
+      myAnimation: 'slide'
     };
   }
 };
@@ -66,7 +69,7 @@ export default {
 .slide-leave-active {
   /* 消える時のトランジション状態 */
   animation: slide-in 1s reverse;
-  transition: opacity 3;
+  transition: opacity 1s;
 }
 @keyframes slide-in {
   from {
