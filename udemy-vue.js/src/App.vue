@@ -1,11 +1,18 @@
 <template>
   <div>
     <button @click="show = !show">表示／非表示</button>
-    <transition name="fade">
+    <transition
+      appear
+      enter-active-class="animate__animated animate__bounce"
+      leave-active-class="animate__animated animate__rubberBand"
+    >
       <p v-if="show"></p>
     </transition>
 
-    <transition name="slide" type="animation">
+    <transition
+      name="slide"
+      type="animation"
+      appear>
       <p v-if="show"></p>
     </transition>
   </div>
