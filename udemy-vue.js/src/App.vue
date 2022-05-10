@@ -4,6 +4,12 @@
     <button @click="myAnimation = 'fade'">fade</button>
     <h3>今のアニメーションは{{ myAnimation }}</h3>
     <button @click="show = !show">表示／非表示</button>
+
+    <transition name="fade">
+      <p v-if="show" key="show">show</p>
+      <p v-if="!show" key="notShow">！</p>
+    </transition>
+
     <transition
       appear
       enter-active-class="animate__animated animate__bounce"
