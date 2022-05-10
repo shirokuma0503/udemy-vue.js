@@ -5,7 +5,7 @@
       <p v-if="show"></p>
     </transition>
 
-    <transition name="slide">
+    <transition name="slide" type="animation">
       <p v-if="show"></p>
     </transition>
   </div>
@@ -47,13 +47,19 @@ export default {
   opacity: 0;
 }
 
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+}
 .slide-enter-active {
   /* 現れる時のトランジション状態 */
   animation: slide-in 1s;
+  transition: opacity 1s;
 }
 .slide-leave-active {
   /* 消える時のトランジション状態 */
   animation: slide-in 1s reverse;
+  transition: opacity 3;
 }
 @keyframes slide-in {
   from {
