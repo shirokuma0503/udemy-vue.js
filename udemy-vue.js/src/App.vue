@@ -5,7 +5,7 @@
     <h3>今のアニメーションは{{ myAnimation }}</h3>
     <button @click="show = !show">表示／非表示</button>
 
-    <transition name="fade">
+    <transition name="fade" mode="out-in">
       <p v-if="show" key="show">show</p>
       <p v-if="!show" key="notShow">！</p>
     </transition>
