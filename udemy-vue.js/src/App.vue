@@ -11,12 +11,7 @@
     :css="false"
       @before-enter="beforeEnter"
       @enter="enter"
-      @after-enter="afterEnter"
-      @enter-cancelled="enterCancelled"
-      @before-leave="beforeLeave"
       @leave="leave"
-      @after-leave="afterLeave"
-      @leave-cancelled="leaveCancelled"
     >
       <div class="circle" v-if="show"></div>
     </transition>
@@ -82,15 +77,6 @@ export default {
         }
       }, 200);
     },
-    // afterEnter(el) {
-    //   // 現れた後
-    // },
-    // enterCancelled(el) {
-    //   // 現れるアニメーションがキャンセルされた時
-    // },
-    // beforeLeave(el) {
-    //   // 消える前
-    // },
     leave(el, done) {
       // 消える時
       let scale = 1;
@@ -102,13 +88,7 @@ export default {
           done();
         }
       }, 200);
-    },
-    // afterLeave(el) {
-    //   // 消えた後
-    // },
-    // leaveCancelled(el) {
-    //   // 消えるアニメーションがキャンセルされた時
-    // }
+    }
   }
 };
 </script>
