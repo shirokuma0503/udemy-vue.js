@@ -5,17 +5,19 @@
     <h3>今のアニメーションは{{ myAnimation }}</h3>
     <br>
 
-  <ul>
-    <transition-group name="fade">
-      <li
-        style="cursor: pointer;"
-        v-for="(number, index) in numbers"
-        :key="number"
-        @click="remove(index)"
-      >{{ number }}</li>
-    </transition-group>
-  </ul>
-  <button @click="add">数を追加</button>
+  <TransitionComponent>
+    <ul>
+      <transition-group name="fade">
+        <li
+          style="cursor: pointer;"
+          v-for="(number, index) in numbers"
+          :key="number"
+          @click="remove(index)"
+        >{{ number }}</li>
+      </transition-group>
+    </ul>
+    <button @click="add">数を追加</button>
+  </TransitionComponent>
     <br>
 
     <button @click="show = !show">表示／非表示</button>
@@ -62,11 +64,13 @@
 <script>
 import AComponent from './components/AComponent.vue';
 import BComponent from './components/BComponent.vue';
+import TransitionComponent from './components/TransitionComponent.vue';
 
 export default {
   components: {
     AComponent,
-    BComponent
+    BComponent,
+    TransitionComponent
   },
   data() {
     return {
