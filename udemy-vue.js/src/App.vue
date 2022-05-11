@@ -3,6 +3,21 @@
     <button @click="myAnimation = 'slide'">slide</button>
     <button @click="myAnimation = 'fade'">fade</button>
     <h3>今のアニメーションは{{ myAnimation }}</h3>
+    <br>
+
+  <ul>
+    <transition-group name="fade">
+      <li
+        style="cursor: pointer;"
+        v-for="(number, index) in numbers"
+        :key="number"
+        @click="remove(index)"
+      >{{ number }}</li>
+    </transition-group>
+  </ul>
+  <button @click="add">数を追加</button>
+    <br>
+
     <button @click="show = !show">表示／非表示</button>
     <br>
     <br>
@@ -57,7 +72,9 @@ export default {
     return {
       show: true,
       myAnimation: 'slide',
-      myComponent: 'AComponent'
+      myComponent: 'AComponent',
+      numbers: [0, 1, 2],
+      nextNumber: 3
     };
   },
   methods: {
@@ -88,6 +105,16 @@ export default {
           done();
         }
       }, 200);
+    },
+    randomIndex() {
+      return Math.floor(Math.random() * this.numbers.length);
+    },
+    add() {
+      this.numbers.splice(this.randomIndex(), 0, this.nextNumber);
+      this.nextNumber += 1;
+    },
+    remove(index) {
+      this.numbers.splice(index, 1);
     }
   }
 };
@@ -113,10 +140,15 @@ export default {
 .fade-leave-active {
   /* 消える時のトランジション状態 */
   transition: opacity 1s;
+  position: absolute;
 }
 .fade-leave-to {
   /* 消える時の最後の状態 */
   opacity: 0;
+}
+
+.fade-move {
+  transition: transform 1s;
 }
 
 .slide-enter,
