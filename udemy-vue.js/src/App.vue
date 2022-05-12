@@ -1,5 +1,7 @@
 <template>
   <div>
+    <button><router-link to="/">TestHome</router-link></button>
+    <button><router-link to="users">Users</router-link></button>
     <router-view></router-view>
 
     <button @click="myAnimation = 'slide'">slide</button>
