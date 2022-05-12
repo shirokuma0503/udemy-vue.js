@@ -1,5 +1,7 @@
 <template>
   <div>
+    <router-view></router-view>
+
     <button @click="myAnimation = 'slide'">slide</button>
     <button @click="myAnimation = 'fade'">fade</button>
     <h3>今のアニメーションは{{ myAnimation }}</h3>

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import GoodNumber from './components/GoodNumber.vue';
+import router from './router';
 
 Vue.component('GoodNumber', GoodNumber);
 // カスタムディレクティブの登録
@@ -24,5 +25,6 @@ Vue.filter("upperCase", function(value) {
 // });
 
 new Vue({
+  router: router,
   render: h => h(App),
 }).$mount('#app');
