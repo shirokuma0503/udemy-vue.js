@@ -1,7 +1,18 @@
 <template>
   <div>
-    <button><router-link to="/">TestHome</router-link></button>
-    <button><router-link to="users">Users</router-link></button>
+    <button>
+      <router-link
+        to="/"
+        active-class="link-active"
+        exact
+      >TestHome</router-link>
+    </button>
+    <button>
+      <router-link
+        to="users"
+        active-class="link-active"
+      >Users</router-link>
+    </button>
     <router-view></router-view>
 
     <button @click="myAnimation = 'slide'">slide</button>
@@ -129,6 +140,10 @@ export default {
 </script>
 
 <style scoped>
+.link-active {
+  font-size: 20px;
+}
+
 .fade-enter {
   /* 現れる最初の状態 */
   opacity: 0;
