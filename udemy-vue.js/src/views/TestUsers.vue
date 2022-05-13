@@ -1,16 +1,15 @@
 <template>
   <div>
     <h1>TestUsers</h1>
-    <button @click="toTestHome">TestHomeページへ</button>
+    <router-link to="/users/1">ユーザー1</router-link>
+    <router-link to="/users/2">ユーザー2</router-link>
+    <hr>
+    <h1>User No. {{ id }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    toTestHome() {
-      this.$router.push("TestHome");
-    }
-  }
+  props: ["id"]
 }
 </script>
