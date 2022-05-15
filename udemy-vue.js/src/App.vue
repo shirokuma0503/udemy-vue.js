@@ -9,9 +9,9 @@
     </button>
     <button>
       <router-link
-        to="users"
+        to="/users"
         active-class="link-active"
-      >Users</router-link>
+      >TestUsers</router-link>
     </button>
     <router-view></router-view>
 
