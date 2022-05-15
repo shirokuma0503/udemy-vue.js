@@ -1,9 +1,7 @@
 <template>
   <div>
     <router-view name="header"></router-view>
-    <transition name="fade">
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
 
     <button @click="myAnimation = 'slide'">slide</button>
     <button @click="myAnimation = 'fade'">fade</button>

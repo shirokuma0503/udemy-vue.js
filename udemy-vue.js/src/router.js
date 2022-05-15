@@ -40,5 +40,19 @@ export default new Router({
       path: '/redirect',
       redirect: { path: '/' }
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    }
+    // return {
+    //   selector: "#user-next"
+    // }
+    // return { x: 0, y: 100 }
+  }
 });

@@ -3,16 +3,16 @@
     <h1>HeaderUser.vue</h1>
     <button>
       <router-link
-        to="/"
+        :to="{ name: 'user-id-profile', params: { id: 1 }, query: { lang: 'ja', page: '2' }, hash: '#next-user' }"
         active-class="link-active"
         exact
-      >TestHome</router-link>
+      >TestUsers</router-link>
     </button>
     <button>
       <router-link
-        to="/users"
+        to="/"
         active-class="link-active"
-      >TestUsers</router-link>
+      >TestHome</router-link>
     </button>
     <hr>
   </div>
