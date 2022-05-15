@@ -23,7 +23,10 @@ export default new Router({
         default: TestUsers,
         header: HeaderUser
       },
-      props: true,
+      props: {
+        default: true,
+        header: false
+      },
       children: [
         {
           path: "profile",
