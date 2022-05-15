@@ -1,7 +1,13 @@
 <template>
   <div>
     <router-view name="header"></router-view>
-    <router-view></router-view>
+    <transition
+      name="fade"
+      mode="out-in"
+      @before-enter="beforeEnter"
+    >
+      <router-view></router-view>
+    </transition>
 
     <button @click="myAnimation = 'slide'">slide</button>
     <button @click="myAnimation = 'fade'">fade</button>
@@ -85,9 +91,9 @@ export default {
     };
   },
   methods: {
-    beforeEnter(el) {
+    beforeEnter() {
       // 現れる前
-      el.style.transform = 'scale(0)'
+      this.$root.$emit('triggerScroll');
     },
     enter(el, done) {
       // 現れる時
