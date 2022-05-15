@@ -1,7 +1,9 @@
 <template>
   <div>
     <router-view name="header"></router-view>
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
 
     <button @click="myAnimation = 'slide'">slide</button>
     <button @click="myAnimation = 'fade'">fade</button>
@@ -10,7 +12,7 @@
 
     <TransitionComponent>
       <ul>
-        <transition-group name="fade">
+        <transition-group name="fade" mode="out-in">
           <li
             style="cursor: pointer;"
             v-for="(number, index) in numbers"
