@@ -1,18 +1,6 @@
 <template>
   <div>
-    <button>
-      <router-link
-        to="/"
-        active-class="link-active"
-        exact
-      >TestHome</router-link>
-    </button>
-    <button>
-      <router-link
-        to="/users"
-        active-class="link-active"
-      >TestUsers</router-link>
-    </button>
+    <router-view name="header"></router-view>
     <router-view></router-view>
 
     <button @click="myAnimation = 'slide'">slide</button>

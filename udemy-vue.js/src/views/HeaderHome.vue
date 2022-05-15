@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <h1>HeaderHome.vue</h1>
+    <button>
+      <router-link
+        to="/users"
+        active-class="link-active"
+      >TestUsers</router-link>
+    </button>
+    <button>
+      <router-link
+        to="/"
+        active-class="link-active"
+        exact
+      >TestHome</router-link>
+    </button>
+    <hr>
+  </div>
+</template>
