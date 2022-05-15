@@ -35,6 +35,10 @@ export default new Router({
         },
         { path: "posts", component: UserPost }
       ]
+    },
+    {
+      path: '/redirect',
+      redirect: { path: '/' }
     }
   ]
 });
