@@ -1,11 +1,17 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import TestHome from './views/TestHome.vue';
-import TestUsers from './views/TestUsers.vue';
-import UserProfile from './views/UserProfile.vue';
-import UserPost from './views/UserPost.vue';
-import HeaderHome from './views/HeaderHome.vue';
-import HeaderUser from './views/HeaderUser.vue';
+// import TestHome from './views/TestHome.vue';
+// import TestUsers from './views/TestUsers.vue';
+// import UserProfile from './views/UserProfile.vue';
+// import UserPost from './views/UserPost.vue';
+// import HeaderHome from './views/HeaderHome.vue';
+// import HeaderUser from './views/HeaderUser.vue';
+const TestHome = () => import(/* webpackChunkName: "Home" */ "./views/TestHome.vue");
+const TestUsers = () => import("./views/TestUsers.vue");
+const UserProfile = () => import("./views/UserProfile.vue");
+const UserPost = () => import("./views/UserPost.vue");
+const HeaderHome = () => import("./views/HeaderHome.vue");
+const HeaderUser = () => import("./views/HeaderUser.vue");
 
 Vue.use(Router);
 

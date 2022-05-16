@@ -18,20 +18,6 @@
 
 <script>
 export default {
-  props: ["id"],
-  beforeRouteEnter(to, from, next) {
-    next();
-  },
-  beforeRouteUpdate(to, from, next) {
-    next();
-  },
-  beforeRouteLeave(to, from, next) {
-    const isLeave = window.confirm("このページを離れますか？");
-    if (isLeave) {
-      next();
-    } else {
-      next(false);
-    }
-  },
+  props: ["id"]
 }
 </script>
