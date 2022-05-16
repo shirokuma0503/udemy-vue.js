@@ -15,6 +15,9 @@ export default new Router({
       path: '/', components: {
         default: TestHome,
         header: HeaderHome
+      },
+      beforeEnter(to, from, next) {
+        next(false);
       }
     },
     {
