@@ -15,20 +15,17 @@
       >TestHome</router-link>
     </button>
     <hr>
-    <button @click="increment">+1</button>
-    <button @click="decrement">-1</button>
+    <button @click="increment(2)">+1</button>
+    <button @click="decrement(2)">-1</button>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   methods: {
-    increment() {
-      this.$store.dispatch("increment", 2);
-    },
-    decrement() {
-      this.$store.dispatch("decrement", 2);
-    }
+    ...mapActions(["increment", "decrement"])
   }
 }
 </script>
