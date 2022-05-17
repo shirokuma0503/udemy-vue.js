@@ -2,15 +2,15 @@
   <div>
     <h1>TestHome</h1>
     <button @click="toTestUsers">TestUsersページへ</button>
-    <p>{{ count }}</p>
+    <p>{{ doubleCount }}</p>
   </div>
 </template>
 
 <script>
 export default {
   computed: {
-    count() {
-      return this.$store.state.count;
+    doubleCount() {
+      return this.$store.getters.doubleCount;
     }
   },
   methods: {
