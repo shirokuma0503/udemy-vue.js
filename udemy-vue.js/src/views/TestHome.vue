@@ -3,15 +3,20 @@
     <h1>TestHome</h1>
     <button @click="toTestUsers">TestUsersページへ</button>
     <p>{{ doubleCount }}</p>
+    <p>{{ testDoubleCount }}</p>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+  // computed: mapGetters(["doubleCount"]),
+  // computed: mapGetters({
+  //   testDoubleCount: "doubleCount"
+  // }),
   computed: {
-    doubleCount() {
-      return this.$store.getters.doubleCount;
-    }
+    ...mapGetters(["doubleCount"])
   },
   methods: {
     toTestUsers() {
