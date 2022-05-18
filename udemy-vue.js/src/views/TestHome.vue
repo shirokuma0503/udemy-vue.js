@@ -3,7 +3,6 @@
     <h1>TestHome</h1>
     <button @click="toTestUsers">TestUsersページへ</button>
     <p>{{ doubleCount }}</p>
-    <p>{{ testDoubleCount }}</p>
     <input type="text" v-model="message">
     <p>{{ message }}</p>
   </div>
