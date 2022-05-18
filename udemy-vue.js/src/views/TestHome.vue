@@ -14,9 +14,6 @@ import { mapGetters } from 'vuex';
 export default {
   computed: {
     ...mapGetters("count", ["doubleCount"]),
-    // message() {
-    //   return this.$store.getters.message;
-    // }
     message: {
       get() {
         return this.$store.getters.message;
